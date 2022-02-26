@@ -4,5 +4,12 @@ function loadHome() {
     const h1 = document.createElement('h1');
     h1.textContent = 'Welcome to our Restaurant';
     const image = document.createElement('img');
-    image.setAttribute('src', './images/welcome-hand.png')
+    image.setAttribute('src', './images/welcome-hand.png');
+
+    div.appendChild(image);
+    div.appendChild(h1);
+
+    return div;
 }
+
+export default loadHome;

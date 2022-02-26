@@ -43,3 +43,9 @@ main > p {
     letter-spacing: 2px;
     line-height: 32px;
 }
+
+.home {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,5 +1,6 @@
 import getMenu from './menu'
 import getHome from './home';
+import getContact from './contact';
 import './style.css';
 
 function navigation() {
@@ -23,17 +24,22 @@ function navigation() {
     })
 
     const menuButton = document.createElement('button');
-    menuButton.classList.add('nav-button');
+    menuButton.classList.add('menu-button');
     menuButton.textContent = 'menu-b';
     menuButton.addEventListener('click', (e) => {
         // e.preventDefault()
-        if(e.target.classList.contains('nav-button'))
+        if(e.target.classList.contains('menu-button'))
         getMenu()
     })
 
     const contactButton = document.createElement('button');
-    contactButton.classList.add('nav-button');
-    contactButton.textContent = 'contact-b';
+    contactButton.classList.add('contact-button');
+    contactButton.textContent = 'contact';
+    contactButton.addEventListener('click', (e) => {
+        if(e.target.classList.contains('contact-button')) {
+            getContact()
+        }
+    })
 
 
     nav.appendChild(homeButton)

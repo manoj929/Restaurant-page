@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){const e=document.createElement("header"),n=document.createElement("nav"),t=document.createElement("ul"),d=document.createElement("li"),c=document.createElement("a");c.innerText="manoj",d.appendChild(c),t.appendChild(d),n.appendChild(t),e.appendChild(n),document.getElementById("content").appendChild(e)}()})();

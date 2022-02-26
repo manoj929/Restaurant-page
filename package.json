@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "page creted using javascript dom and webpack ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manoj929/Restaurant-page.git"
+  },
+  "author": "manoj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manoj929/Restaurant-page/issues"
+  },
+  "homepage": "https://github.com/manoj929/Restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

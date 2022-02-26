@@ -1,7 +1,14 @@
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(255, 0, 0, 0.3)),url('./images/pizza-banner.jpg')  ;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(255, 0, 0, 0.3)),url('../dist/images/pizza-banner.jpg')  ;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
 }
 
 .logo {
@@ -11,25 +18,20 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
-ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+nav > button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 25px;
 }
 
-ul > li > a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3rem;
-}
 
 main {
-    width: 530px;
+    width: 700px;
     margin: 40px auto;
     background-color: bisque;
     padding: 20px;

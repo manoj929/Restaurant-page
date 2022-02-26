@@ -12,4 +12,10 @@ function loadHome() {
     return div;
 }
 
-export default loadHome;
+function getHome() {
+    const main = document.getElementById('main');
+    main.textContent = ''
+    main.appendChild(loadHome());
+}
+
+export default getHome;

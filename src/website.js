@@ -1,22 +1,52 @@
+import getMenu from './menu'
+import getHome from './home';
+import './style.css';
 
-
-function createElement() {
+function navigation() {
+    const content = document.getElementById('content');
     const header = document.createElement('header');
-    const nav = document.createElement('nav')
-    const ul = document.createElement('ul');
-    const li = document.createElement('li');
-    const a = document.createElement('a');
+    const logo = document.createElement('div');
+    logo.classList.add('logo');
+    logo.textContent = 'Odin Restaurant'
+    const nav = document.createElement('nav');
 
-    a.innerText = 'manoj'
+    const main = document.createElement('main');
+    main.setAttribute('id', 'main')
 
-    li.appendChild(a);
-    ul.appendChild(li)
-    nav.appendChild(ul)
+    const homeButton = document.createElement('button');
+    homeButton.classList.add('home-button');
+    homeButton.textContent = 'Home';
+    homeButton.addEventListener('click', (e) => {
+        // e.preventDefault()
+        if(e.target.classList.contains('home-button'))
+        getHome()
+    })
+
+    const menuButton = document.createElement('button');
+    menuButton.classList.add('nav-button');
+    menuButton.textContent = 'menu-b';
+    menuButton.addEventListener('click', (e) => {
+        // e.preventDefault()
+        if(e.target.classList.contains('nav-button'))
+        getMenu()
+    })
+
+    const contactButton = document.createElement('button');
+    contactButton.classList.add('nav-button');
+    contactButton.textContent = 'contact-b';
+
+
+    nav.appendChild(homeButton)
+    nav.appendChild(menuButton)
+    nav.appendChild(contactButton)
+    header.appendChild(logo);
     header.appendChild(nav);
-
-    const content = document.getElementById('content').appendChild(header)
+    
+    
+    content.appendChild(header)
+    content.appendChild(main);
 
     return content
 }
 
-export default createElement;
+export default navigation;

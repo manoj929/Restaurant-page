@@ -19,6 +19,7 @@ function loadContact() {
 
 function getContact() {
     const main = document.getElementById('main');
+    main.textContent = ''
     main.appendChild(loadContact())
 }
 

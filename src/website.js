@@ -29,6 +29,7 @@ function navigation() {
     menuButton.addEventListener('click', (e) => {
         // e.preventDefault()
         if(e.target.classList.contains('menu-button'))
+        main.textContent = ''
         getMenu()
     })
 

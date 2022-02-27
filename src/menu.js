@@ -1,21 +1,24 @@
 import './style.css';
 function createMenu() {
-    const card = document.createElement('div');
-    card.classList.add('menu-card');
-    card.appendChild(createMenuItem('margherita', '$5', 'margherita.jpg', 'margherita.jpg'));
-    card.appendChild(createMenuItem('gluteen free veg pizza', '$5', 'gluten-free.webp'));
-    card.appendChild(createMenuItem('dominos', '$5', 'dominos.jpeg', 'dominos.jpeg'));
-    card.appendChild(createMenuItem('chicken pizza', '$5', 'chicken.jpg', 'chicken.jpg'));
-    card.appendChild(createMenuItem('margherita', '$5', 'margherita.jpg', 'margherita.jpg'));
-    card.appendChild(createMenuItem('gluteen free veg pizza', '$5', 'gluten-free.webp'));
-    card.appendChild(createMenuItem('dominos', '$5', 'dominos.jpeg', 'dominos.jpeg'));
-    card.appendChild(createMenuItem('chicken pizza', '$5', 'chicken.jpg', 'chicken.jpg'));
-    return card;
+    const menu = document.createElement('div');
+    menu.classList.add('menu');
+    menu.appendChild(createMenuItem('margherita', '$5', 'margherita.jpg', 'margherita.jpg'));
+    menu.appendChild(createMenuItem('Veg pizza', '$5', 'gluten-free.webp'));
+    menu.appendChild(createMenuItem('dominos', '$5', 'dominos.jpeg', 'dominos.jpeg'));
+    menu.appendChild(createMenuItem('chicken pizza', '$5', 'chicken.jpg', 'chicken.jpg'));
+    menu.appendChild(createMenuItem('margherita', '$5', 'margherita.jpg', 'margherita.jpg'));
+    menu.appendChild(createMenuItem('veg pizza', '$5', 'gluten-free.webp'));
+    menu.appendChild(createMenuItem('dominos', '$5', 'dominos.jpeg', 'dominos.jpeg'));
+    menu.appendChild(createMenuItem('chicken pizza', '$5', 'chicken.jpg', 'chicken.jpg'));
+    return menu;
 }
 
 function createMenuItem(item, price, image) {
     const menuItem = document.createElement('div');
     menuItem.classList.add('menu-item');
+
+    const itemInfo = document.createElement('div')
+    itemInfo.classList.add('item-details');
 
     let foodName = document.createElement('h3');
     foodName.textContent = item;
@@ -23,12 +26,16 @@ function createMenuItem(item, price, image) {
     let itemPrice = document.createElement('p');
     itemPrice.textContent = price;
 
+    const itemImage = document.createElement('div');
+    itemImage.classList.add('item-image');
     const foodImage = document.createElement('img');
     foodImage.src = `./images/${image}`;
 
-    menuItem.appendChild(foodName);
-    menuItem.appendChild(itemPrice);
-    menuItem.appendChild(foodImage);
+    itemInfo.appendChild(foodName);
+    itemInfo.appendChild(itemPrice);
+    menuItem.appendChild(itemInfo);
+    itemImage.appendChild(foodImage)
+    menuItem.appendChild(itemImage);
 
     return menuItem
 }

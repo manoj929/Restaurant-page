@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(255, 0, 0, 0.3)),url('../dist/images/pizza-banner.jpg')  ;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
 }
 
 header {
@@ -9,11 +19,13 @@ header {
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    padding: 15px 0;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: #fff;
+    font-weight: bold;
 }
 
 nav {
@@ -22,32 +34,87 @@ nav {
 }
 
 nav > button {
-    padding: 12px;
+    padding: 12px 20px;
     font-size: 1.1rem;
     background-color: antiquewhite;
     border: none;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 
 main {
     width: 700px;
-    margin: 40px auto;
+    margin: 100px auto 0 auto;
     background-color: bisque;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
 }
 
-main > p {
-    text-align: justify;
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
     color: rgb(129, 56, 56);
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    line-height: 32px;
 }
 
-.home {
-    width: 600px;
+.home > img {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home > h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+}
+.menu {
+ display: grid;
+ width: 97%;
+ grid-template-columns: 50% 50%;
+ gap: 20px;
+}
+
+.menu-item {
     display: flex;
-    flex-direction: column;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(78, 59, 59);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.menu-item > .item-details {
+    color: rgb(129, 56, 56);
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.item-details > p {
+    margin-top: 5px;
+}
+
+.item-image > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.contact {
+    text-align: center;
+    color: rgb(129, 56, 56);
+}
+
+.contact > h1 {
+    font-size: 3rem;
+    font-weight: bold;  
+}
+.contact  h1,h2,p {
+    margin-bottom: 15px;  
 }

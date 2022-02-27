@@ -25,7 +25,7 @@ function navigation() {
 
     const menuButton = document.createElement('button');
     menuButton.classList.add('menu-button');
-    menuButton.textContent = 'menu-b';
+    menuButton.textContent = 'menu';
     menuButton.addEventListener('click', (e) => {
         // e.preventDefault()
         if(e.target.classList.contains('menu-button'))
